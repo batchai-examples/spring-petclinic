@@ -1,0 +1,27 @@
+{
+    "path": "src/main/java/org/springframework/samples/petclinic/owner/PetType.java",
+    "model_usage_metrics": {
+        "Duration": 8328078646,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    },
+    "test_file_path": "src/test/java/org/springframework/samples/petclinic/owner/PetTypeTest.java",
+    "existing_test_code": "",
+    "original_code": "/*\n * Copyright 2012-2019 the original author or authors.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *      https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\npackage org.springframework.samples.petclinic.owner;\n\nimport org.springframework.samples.petclinic.model.NamedEntity;\n\nimport jakarta.persistence.Entity;\nimport jakarta.persistence.Table;\n\n/**\n * @author Juergen Hoeller Can be Cat, Dog, Hamster...\n */\n@Entity\n@Table(name = \"types\")\npublic class PetType extends NamedEntity {\n\n}\n",
+    "test_code": "package org.springframework.samples.petclinic.owner;\n\nimport static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.Test;\n\npublic class PetTypeTest {\n\n    private PetType petType;\n\n    @BeforeEach\n    public void setUp() {\n        petType = new PetType();\n    }\n\n    /**\n     * Test to verify that the default constructor initializes a PetType object.\n     */\n    @Test\n    public void testDefaultConstructor() {\n        assertNotNull(petType);\n    }\n\n    /**\n     * Test to verify that the setName method sets the name of the PetType.\n     */\n    @Test\n    public void testSetName() {\n        petType.setName(\"Cat\");\n        assertEquals(\"Cat\", petType.getName());\n    }\n\n    /**\n     * Test to verify that the getName method returns the correct name of the PetType.\n     */\n    @Test\n    public void testGetName() {\n        petType.setName(\"Dog\");\n        assertEquals(\"Dog\", petType.getName());\n    }\n\n    /**\n     * Test to verify that the setName method throws IllegalArgumentException when null is passed as argument.\n     */\n    @Test\n    public void testSetNameWithNull() {\n        assertThrows(IllegalArgumentException.class, () -\u003e {\n            petType.setName(null);\n        });\n    }\n\n    /**\n     * Test to verify that the setName method throws IllegalArgumentException when an empty string is passed as argument.\n     */\n    @Test\n    public void testSetNameWithEmptyString() {\n        assertThrows(IllegalArgumentException.class, () -\u003e {\n            petType.setName(\"\");\n        });\n    }\n\n    /**\n     * Test to verify that the toString method returns a non-empty string representation of the PetType.\n     */\n    @Test\n    public void testToString() {\n        petType.setName(\"Hamster\");\n        assertTrue(petType.toString().length() \u003e 0);\n    }\n}\n",
+    "amount_of_generated_test_cases": 6,
+    "single_test_run_command": "mvn test -Dtest=org.springframework.samples.petclinic.owner.PetTypeTest"
+}
