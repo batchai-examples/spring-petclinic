@@ -1,0 +1,26 @@
+{
+    "has_issue": false,
+    "overall_severity": "",
+    "issues": [],
+    "fixed_code": "\u003c?xml version=\"1.0\"?\u003e\n\u003c!DOCTYPE module PUBLIC\n\t\t\"-//Puppy Crawl//DTD Check Configuration 1.2//EN\"\n\t\t\"https://checkstyle.org/dtds/configuration_1_2.dtd\"\u003e\n\u003cmodule name=\"com.puppycrawl.tools.checkstyle.Checker\"\u003e\n\t\u003cmodule name=\"io.spring.nohttp.checkstyle.check.NoHttpCheck\"/\u003e\n\t\u003cmodule name=\"SuppressionFilter\"\u003e\n\t\t\u003cproperty name=\"file\" value=\"${config_loc}/nohttp-checkstyle-suppressions.xml\"/\u003e\n\t\u003c/module\u003e\n\u003c/module\u003e\n",
+    "original_code": "\u003c?xml version=\"1.0\"?\u003e\n\u003c!DOCTYPE module PUBLIC\n\t\t\"-//Puppy Crawl//DTD Check Configuration 1.2//EN\"\n\t\t\"https://checkstyle.org/dtds/configuration_1_2.dtd\"\u003e\n\u003cmodule name=\"com.puppycrawl.tools.checkstyle.Checker\"\u003e\n\t\u003cmodule name=\"io.spring.nohttp.checkstyle.check.NoHttpCheck\"/\u003e\n\t\u003cmodule name=\"SuppressionFilter\"\u003e\n\t\t\u003cproperty name=\"file\" value=\"${config_loc}/nohttp-checkstyle-suppressions.xml\"/\u003e\n\t\u003c/module\u003e\n\u003c/module\u003e\n",
+    "path": "src/checkstyle/nohttp-checkstyle.xml",
+    "model_usage_metrics": {
+        "Duration": 1024487516,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}

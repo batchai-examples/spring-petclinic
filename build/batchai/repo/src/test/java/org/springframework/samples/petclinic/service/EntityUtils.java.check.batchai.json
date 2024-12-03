@@ -1,0 +1,26 @@
+{
+    "has_issue": false,
+    "overall_severity": "",
+    "issues": [],
+    "fixed_code": "/*\n * Copyright 2012-2019 the original author or authors.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *      https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\npackage org.springframework.samples.petclinic.service;\n\nimport org.springframework.orm.ObjectRetrievalFailureException;\nimport org.springframework.samples.petclinic.model.BaseEntity;\n\nimport java.util.Collection;\n\n/**\n * Utility methods for handling entities. Separate from the BaseEntity class mainly\n * because of dependency on the ORM-associated ObjectRetrievalFailureException.\n *\n * @author Juergen Hoeller\n * @author Sam Brannen\n * @see org.springframework.samples.petclinic.model.BaseEntity\n * @since 29.10.2003\n */\npublic abstract class EntityUtils {\n\n\t/**\n\t * Look up the entity of the given class with the given id in the given collection.\n\t * @param entities the collection to search\n\t * @param entityClass the entity class to look up\n\t * @param entityId the entity id to look up\n\t * @return the found entity\n\t * @throws ObjectRetrievalFailureException if the entity was not found\n\t */\n\tpublic static \u003cT extends BaseEntity\u003e T getById(Collection\u003cT\u003e entities, Class\u003cT\u003e entityClass, int entityId)\n\t\t\tthrows ObjectRetrievalFailureException {\n\t\tfor (T entity : entities) {\n\t\t\tif (entity.getId() == entityId \u0026\u0026 entityClass.isInstance(entity)) {\n\t\t\t\treturn entity;\n\t\t\t}\n\t\t}\n\t\tthrow new ObjectRetrievalFailureException(entityClass, entityId);\n\t}\n\n}\n",
+    "original_code": "/*\n * Copyright 2012-2019 the original author or authors.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *      https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\npackage org.springframework.samples.petclinic.service;\n\nimport org.springframework.orm.ObjectRetrievalFailureException;\nimport org.springframework.samples.petclinic.model.BaseEntity;\n\nimport java.util.Collection;\n\n/**\n * Utility methods for handling entities. Separate from the BaseEntity class mainly\n * because of dependency on the ORM-associated ObjectRetrievalFailureException.\n *\n * @author Juergen Hoeller\n * @author Sam Brannen\n * @see org.springframework.samples.petclinic.model.BaseEntity\n * @since 29.10.2003\n */\npublic abstract class EntityUtils {\n\n\t/**\n\t * Look up the entity of the given class with the given id in the given collection.\n\t * @param entities the collection to search\n\t * @param entityClass the entity class to look up\n\t * @param entityId the entity id to look up\n\t * @return the found entity\n\t * @throws ObjectRetrievalFailureException if the entity was not found\n\t */\n\tpublic static \u003cT extends BaseEntity\u003e T getById(Collection\u003cT\u003e entities, Class\u003cT\u003e entityClass, int entityId)\n\t\t\tthrows ObjectRetrievalFailureException {\n\t\tfor (T entity : entities) {\n\t\t\tif (entity.getId() == entityId \u0026\u0026 entityClass.isInstance(entity)) {\n\t\t\t\treturn entity;\n\t\t\t}\n\t\t}\n\t\tthrow new ObjectRetrievalFailureException(entityClass, entityId);\n\t}\n\n}\n",
+    "path": "src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java",
+    "model_usage_metrics": {
+        "Duration": 1170014685,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}

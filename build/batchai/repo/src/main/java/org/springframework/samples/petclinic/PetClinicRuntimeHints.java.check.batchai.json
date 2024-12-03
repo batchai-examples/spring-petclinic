@@ -1,0 +1,26 @@
+{
+    "has_issue": false,
+    "overall_severity": "",
+    "issues": [],
+    "fixed_code": "/*\n * Copyright 2012-2019 the original author or authors.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *      https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\npackage org.springframework.samples.petclinic;\n\nimport org.springframework.aot.hint.RuntimeHints;\nimport org.springframework.aot.hint.RuntimeHintsRegistrar;\nimport org.springframework.samples.petclinic.model.BaseEntity;\nimport org.springframework.samples.petclinic.model.Person;\nimport org.springframework.samples.petclinic.vet.Vet;\n\npublic class PetClinicRuntimeHints implements RuntimeHintsRegistrar {\n\n\t@Override\n\tpublic void registerHints(RuntimeHints hints, ClassLoader classLoader) {\n\t\thints.resources().registerPattern(\"db/*\"); // https://github.com/spring-projects/spring-boot/issues/32654\n\t\thints.resources().registerPattern(\"messages/*\");\n\t\thints.resources().registerPattern(\"META-INF/resources/webjars/*\");\n\t\thints.resources().registerPattern(\"mysql-default-conf\");\n\t\thints.serialization().registerType(BaseEntity.class);\n\t\thints.serialization().registerType(Person.class);\n\t\thints.serialization().registerType(Vet.class);\n\t}\n\n}\n",
+    "original_code": "/*\n * Copyright 2012-2019 the original author or authors.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *      https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\npackage org.springframework.samples.petclinic;\n\nimport org.springframework.aot.hint.RuntimeHints;\nimport org.springframework.aot.hint.RuntimeHintsRegistrar;\nimport org.springframework.samples.petclinic.model.BaseEntity;\nimport org.springframework.samples.petclinic.model.Person;\nimport org.springframework.samples.petclinic.vet.Vet;\n\npublic class PetClinicRuntimeHints implements RuntimeHintsRegistrar {\n\n\t@Override\n\tpublic void registerHints(RuntimeHints hints, ClassLoader classLoader) {\n\t\thints.resources().registerPattern(\"db/*\"); // https://github.com/spring-projects/spring-boot/issues/32654\n\t\thints.resources().registerPattern(\"messages/*\");\n\t\thints.resources().registerPattern(\"META-INF/resources/webjars/*\");\n\t\thints.resources().registerPattern(\"mysql-default-conf\");\n\t\thints.serialization().registerType(BaseEntity.class);\n\t\thints.serialization().registerType(Person.class);\n\t\thints.serialization().registerType(Vet.class);\n\t}\n\n}\n",
+    "path": "src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+    "model_usage_metrics": {
+        "Duration": 1086111671,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}

@@ -27,7 +27,7 @@
             "severity_reason": "This issue can prevent error messages from displaying correctly, leading to a poor user experience."
         }
     ],
-    "fixed_code": "\u003chtml\u003e\n\u003cbody\u003e\n  \u003cform\u003e\n    \u003cth:block th:fragment=\"select (label, name, items)\"\u003e\n      \u003cdiv th:with=\"valid=${!#fields.hasErrors(name)}\"\n        th:class=\"${'form-group' + (valid ? '' : ' has-error')}\"\n        class=\"form-group\"\u003e\n        \u003clabel class=\"col-sm-2 control-label\" th:text=\"${label}\"\u003eLabel\u003c/label\u003e\n\n        \u003cdiv class=\"col-sm-10\"\u003e\n          \u003cselect th:field=\"*{name}\"\u003e\n            \u003coption th:each=\"item : ${items}\" th:value=\"${item}\"\n              th:text=\"${item}\"\u003edog\u003c/option\u003e\n          \u003c/select\u003e\n          \u003cspan th:if=\"${valid}\"\n            class=\"fa fa-ok form-control-feedback\"\n            aria-hidden=\"true\"\u003e\u003c/span\u003e\n          \u003cth:block th:if=\"${!valid}\"\u003e\n            \u003cspan\n              class=\"fa fa-remove form-control-feedback\"\n              aria-hidden=\"true\"\u003e\u003c/span\u003e\n            \u003cspan class=\"help-inline\" th:errors=\"*{name}\"\u003eError\u003c/span\u003e\n          \u003c/th:block\u003e\n        \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/th:block\u003e\n  \u003c/form\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n",
+    "overall_severity": "major",
     "path": "",
     "model_usage_metrics": {
         "Duration": 8899918041,

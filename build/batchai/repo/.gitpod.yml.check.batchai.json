@@ -1,0 +1,26 @@
+{
+    "has_issue": false,
+    "overall_severity": "",
+    "issues": [],
+    "fixed_code": "image:\n  file: ./.devcontainer/Dockerfile\ntasks:\n  - before: sudo usermod -a -G sdkman gitpod \u0026\u0026 sudo usermod -a -G nvm gitpod \u0026\u0026 sudo chown -R gitpod /usr/local/sdkman /usr/local/share/nvm\n  - init: ./mvnw install\nvscode:\n  extensions:\n  - vscjava.vscode-java-pack\n  - redhat.vscode-xml\n",
+    "original_code": "image:\n  file: ./.devcontainer/Dockerfile\ntasks:\n  - before: sudo usermod -a -G sdkman gitpod \u0026\u0026 sudo usermod -a -G nvm gitpod \u0026\u0026 sudo chown -R gitpod /usr/local/sdkman /usr/local/share/nvm\n  - init: ./mvnw install\nvscode:\n  extensions:\n  - vscjava.vscode-java-pack\n  - redhat.vscode-xml\n",
+    "path": ".gitpod.yml",
+    "model_usage_metrics": {
+        "Duration": 1369568209,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "has_issue": true,
+    "overall_severity": "minor",
+    "issues": [
+        {
+            "short_description": "Incorrect image source path",
+            "detailed_explaination": "The image source path in the \u003cimg\u003e tag is set to a relative path ('../static/resources/images/pets.png') which may not resolve correctly depending on the context in which the HTML is served. This can lead to broken images when the application is deployed.",
+            "suggestion": "Use the Thymeleaf syntax for the image source to ensure the correct path is generated. Change the src attribute to use th:src instead of a static relative path.",
+            "issue_line_begin": 8,
+            "issue_line_end": 8,
+            "issue_reference_urls": [
+                "https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-thymeleaf"
+            ],
+            "severity": "minor",
+            "severity_reason": "This issue can lead to a poor user experience if images do not load correctly."
+        }
+    ],
+    "fixed_code": "{\n    \"has_issue\": true,\n    \"overall_severity\": \"minor\",\n    \"issues\": [\n        {\n            \"short_description\": \"Incorrect image source path\",\n            \"detailed_explaination\": \"The image source path in the \u003cimg\u003e tag is set to a relative path ('../static/resources/images/pets.png') which may not resolve correctly depending on the context in which the HTML is served. This can lead to broken images when the application is deployed.\",\n            \"suggestion\": \"Use the Thymeleaf syntax for the image source to ensure the correct path is generated. Change the src attribute to use th:src instead of a static relative path.\",\n            \"issue_line_begin\": 8,\n            \"issue_line_end\": 8,\n            \"issue_reference_urls\": [\n                \"https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-thymeleaf\"\n            ],\n            \"severity\": \"minor\",\n            \"severity_reason\": \"This issue can lead to a poor user experience if images do not load correctly.\"\n        }\n    ],\n    \"fixed_code\": \"\u003c!DOCTYPE html\u003e\\n\\n\u003chtml xmlns:th=\\\"https://www.thymeleaf.org\\\" th:replace=\\\"~{fragments/layout :: layout (~{::body},'home')}\\\"\u003e\\n\\n  \u003cbody\u003e\\n\\n    \u003ch2 th:text=\\\"#{welcome}\\\"\u003eWelcome\u003c/h2\u003e\\n    \u003cdiv class=\\\"row\\\"\u003e\\n        \u003cdiv class=\\\"col-md-12\\\"\u003e\\n          \u003cimg class=\\\"img-responsive\\\" th:src=\\\"@{/resources/images/pets.png}\\\"/\u003e\\n        \u003c/div\u003e\\n    \u003c/div\u003e\\n\\n  \u003c/body\u003e\\n\\n\u003c/html\u003e\",\n    \"path\": \"\",\n    \"model_usage_metrics\": {\n        \"Duration\": 4226459256,\n        \"EvaluatedPromptTokens\": 576,\n        \"OpenAiUsage\": {\n            \"completion_tokens\": 344,\n            \"prompt_tokens\": 580,\n            \"total_tokens\": 924,\n            \"completion_tokens_details\": {\n                \"audio_tokens\": 0,\n                \"reasoning_tokens\": 0\n            },\n            \"prompt_tokens_details\": {\n                \"audio_tokens\": 0,\n                \"cached_tokens\": 0\n            }\n        }\n    }\n}\n",
+    "original_code": "{\n    \"has_issue\": true,\n    \"overall_severity\": \"minor\",\n    \"issues\": [\n        {\n            \"short_description\": \"Incorrect image source path\",\n            \"detailed_explaination\": \"The image source path in the \\u003cimg\\u003e tag is set to a relative path ('../static/resources/images/pets.png') which may not resolve correctly depending on the context in which the HTML is served. This can lead to broken images when the application is deployed.\",\n            \"suggestion\": \"Use the Thymeleaf syntax for the image source to ensure the correct path is generated. Change the src attribute to use th:src instead of a static relative path.\",\n            \"issue_line_begin\": 8,\n            \"issue_line_end\": 8,\n            \"issue_reference_urls\": [\n                \"https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-thymeleaf\"\n            ],\n            \"severity\": \"minor\",\n            \"severity_reason\": \"This issue can lead to a poor user experience if images do not load correctly.\"\n        }\n    ],\n    \"fixed_code\": \"\\u003c!DOCTYPE html\\u003e\\n\\n\\u003chtml xmlns:th=\\\"https://www.thymeleaf.org\\\" th:replace=\\\"~{fragments/layout :: layout (~{::body},'home')}\\\"\\u003e\\n\\n  \\u003cbody\\u003e\\n\\n    \\u003ch2 th:text=\\\"#{welcome}\\\"\\u003eWelcome\\u003c/h2\\u003e\\n    \\u003cdiv class=\\\"row\\\"\\u003e\\n        \\u003cdiv class=\\\"col-md-12\\\"\\u003e\\n          \\u003cimg class=\\\"img-responsive\\\" th:src=\\\"@{/resources/images/pets.png}\\\"/\\u003e\\n        \\u003c/div\\u003e\\n    \\u003c/div\\u003e\\n\\n  \\u003c/body\\u003e\\n\\n\\u003c/html\\u003e\\n\",\n    \"path\": \"\",\n    \"model_usage_metrics\": {\n        \"Duration\": 4226459256,\n        \"EvaluatedPromptTokens\": 576,\n        \"OpenAiUsage\": {\n            \"completion_tokens\": 344,\n            \"prompt_tokens\": 580,\n            \"total_tokens\": 924,\n            \"completion_tokens_details\": {\n                \"audio_tokens\": 0,\n                \"reasoning_tokens\": 0\n            },\n            \"prompt_tokens_details\": {\n                \"audio_tokens\": 0,\n                \"cached_tokens\": 0\n            }\n        }\n    }\n}\n",
+    "path": "build/batchai/spring-petclinic/src/main/resources/templates/welcome.html.review.json",
+    "model_usage_metrics": {
+        "Duration": 13591227744,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "has_issue": false,
+    "overall_severity": "",
+    "issues": [],
+    "fixed_code": "services:\n  mysql:\n    image: mysql:9.0\n    ports:\n      - \"3306:3306\"\n    environment:\n      - MYSQL_ROOT_PASSWORD=your_strong_password_here\n      - MYSQL_ALLOW_EMPTY_PASSWORD=true\n      - MYSQL_USER=petclinic\n      - MYSQL_PASSWORD=petclinic\n      - MYSQL_DATABASE=petclinic\n    volumes:\n      - \"./conf.d:/etc/mysql/conf.d:ro\"\n    profiles:\n      - mysql\n  postgres:\n    image: postgres:17.0\n    ports:\n      - \"5432:5432\"\n    environment:\n      - POSTGRES_PASSWORD=petclinic\n      - POSTGRES_USER=petclinic\n      - POSTGRES_DB=petclinic\n    profiles:\n      - postgres\n",
+    "original_code": "services:\n  mysql:\n    image: mysql:9.0\n    ports:\n      - \"3306:3306\"\n    environment:\n      - MYSQL_ROOT_PASSWORD=your_strong_password_here\n      - MYSQL_ALLOW_EMPTY_PASSWORD=true\n      - MYSQL_USER=petclinic\n      - MYSQL_PASSWORD=petclinic\n      - MYSQL_DATABASE=petclinic\n    volumes:\n      - \"./conf.d:/etc/mysql/conf.d:ro\"\n    profiles:\n      - mysql\n  postgres:\n    image: postgres:17.0\n    ports:\n      - \"5432:5432\"\n    environment:\n      - POSTGRES_PASSWORD=petclinic\n      - POSTGRES_USER=petclinic\n      - POSTGRES_DB=petclinic\n    profiles:\n      - postgres\n",
+    "path": "docker-compose.yml",
+    "model_usage_metrics": {
+        "Duration": 3228995974,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}

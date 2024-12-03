@@ -1,0 +1,26 @@
+{
+    "has_issue": false,
+    "overall_severity": "",
+    "issues": [],
+    "fixed_code": "# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time\n# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven\n\nname: Java CI with Maven\n\non:\n  push:\n    branches: [ main ]\n  pull_request:\n    branches: [ main ]\n\njobs:\n  build:\n\n    runs-on: ubuntu-latest\n    strategy:\n      matrix:\n        java: [ \"17\" ]\n\n    steps:\n      - uses: actions/checkout@v2\n      - name: Set up JDK ${{matrix.java}}\n        uses: actions/setup-java@v2\n        with:\n          java-version: ${{matrix.java}}\n          distribution: 'adopt'\n          cache: maven\n      - name: Build with Maven Wrapper\n        run: ./mvnw -B package\n",
+    "original_code": "# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time\n# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven\n\nname: Java CI with Maven\n\non:\n  push:\n    branches: [ main ]\n  pull_request:\n    branches: [ main ]\n\njobs:\n  build:\n\n    runs-on: ubuntu-latest\n    strategy:\n      matrix:\n        java: [ \"17\" ]\n\n    steps:\n      - uses: actions/checkout@v2\n      - name: Set up JDK ${{matrix.java}}\n        uses: actions/setup-java@v2\n        with:\n          java-version: ${{matrix.java}}\n          distribution: 'adopt'\n          cache: maven\n      - name: Build with Maven Wrapper\n        run: ./mvnw -B package\n",
+    "path": ".github/workflows/maven-build.yml",
+    "model_usage_metrics": {
+        "Duration": 1530148360,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}

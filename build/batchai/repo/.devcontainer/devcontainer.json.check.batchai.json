@@ -1,0 +1,26 @@
+{
+    "has_issue": false,
+    "overall_severity": "",
+    "issues": [],
+    "fixed_code": "{\n  \"name\": \"Java\",\n  \"image\": \"mcr.microsoft.com/devcontainers/base:ubuntu\",\n  \"features\": {\n    \"ghcr.io/devcontainers/features/java:1\": {\n      \"version\": \"21-oracle\",\n      \"jdkDistro\": \"oracle\"\n    },\n    \"ghcr.io/devcontainers/features/azure-cli:1\": {},\n    \"ghcr.io/devcontainers/features/docker-in-docker:2\": {},\n    \"ghcr.io/devcontainers/features/github-cli:1\": {}\n  },\n\n  \"customizations\": {\n    \"vscode\": {\n      \"settings\": {},\n      \"extensions\": [\n        \"redhat.vscode-xml\",\n        \"visualstudioexptteam.vscodeintellicode\",\n        \"vscjava.vscode-java-pack\"\n      ]\n    }\n  },\n  \"remoteUser\": \"vscode\"\n}\n",
+    "original_code": "{\n  \"name\": \"Java\",\n  \"image\": \"mcr.microsoft.com/devcontainers/base:ubuntu\",\n  \"features\": {\n    \"ghcr.io/devcontainers/features/java:1\": {\n      \"version\": \"21-oracle\",\n      \"jdkDistro\": \"oracle\"\n    },\n    \"ghcr.io/devcontainers/features/azure-cli:1\": {},\n    \"ghcr.io/devcontainers/features/docker-in-docker:2\": {},\n    \"ghcr.io/devcontainers/features/github-cli:1\": {}\n  },\n\n  \"customizations\": {\n    \"vscode\": {\n      \"settings\": {},\n      \"extensions\": [\n        \"redhat.vscode-xml\",\n        \"visualstudioexptteam.vscodeintellicode\",\n        \"vscjava.vscode-java-pack\"\n      ]\n    }\n  },\n  \"remoteUser\": \"vscode\"\n}\n",
+    "path": ".devcontainer/devcontainer.json",
+    "model_usage_metrics": {
+        "Duration": 1073378719,
+        "OpenAiUsage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0,
+            "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+            }
+        }
+    }
+}
